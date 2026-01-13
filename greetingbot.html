@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greeting Bot</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="bg-black p-2 ">
+  <div id="inputdiv" class=" flex flex-col rounded mx-auto mt-50 bg-gray-400 p-4 sm:w-[500px] h-[300px] space-y-2 shadow-lg ">
+    <h1 class="mt-10 text-center text-2xl font-semibold  "> Greeting Bot 🤖</h1>
+    <input type="text" placeholder="Enter your text" id="text" class="border border-2 border-purple-700 outline-none p-2 rounded  text-gray-700" />
+    <span id="error" class="hidden"></span>
+    <button type="button" class="mt-10  bg-purple-600 p-2 text-white rounded cursor-pointer font-semibold text-xl hover:bg-purple-700">Greet</button>
+
+  </div>
+  <div id="result" class=" mt-10 w-[500px] mx-auto bg-purple-600 p-2 rounded  text-white hidden">
+  </div>
+  <script type="module" src="/src/greetingbot.js"></script>
+</body>
+
+</html>

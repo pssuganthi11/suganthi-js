@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/style.css">
+  <title>Color picker</title>
+</head>
+
+<body>
+  <div>
+    <h1 class="text-3xl font-semibold text-center mt-10">
+      Color Picker 👨‍🎨
+    </h1>
+    <div id="background"   class="mt-10 flex flex-col md:flex-row justify-around items-center max-w-2xl p-4 bg-gray-100 shadow-lg rounded mx-auto">
+
+      <div class=" flex space-x-2 ">
+        <button type="button" id="redbtn" class=" bg-red-700 p-2 rounded text-black  shadow-lg cursor-pointer hover:bg-red-400">Red</button>
+        <button type="button" id="yellowbtn" class="  bg-yellow-200 p-2 rounded text-black shadow-lg  cursor-pointer hover:bg-yellow-400">Yellow</button>
+        <button type="button" id="greenbtn" class=" bg-green-700 p-2 rounded text-black  shadow-lg  cursor-pointer hover:bg-green-400">Green</button>
+        <button type="button" id="bluebtn" class=" bg-blue-700 p-2 rounded text-black  shadow-lg  cursor-pointer hover:bg-blue-400">Blue</button>
+        <button type="button" id="orangebtn" class=" bg-orange-300 p-2 rounded text-black  shadow-lg  cursor-pointer hover:bg-orange-400">Orange</button>
+      </div>
+      <div class="flex space-x-2 mt-10 md:mt-0">
+        <button type="button" id="randombtn" class="bg-purple-300 p-2 rounded text-black  shadow-lg  cursor-pointer hover:bg-purple-800">Random Color</button>
+        <button type="button" id="togglebtn" class="bg-purple-300 p-2 rounded text-black  shadow-lg  cursor-pointer hover:bg-purple-800  ">Toggle</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/colorswitcher.js"></script>
+</body>
+
+</html>

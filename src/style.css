@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+.products {
+    background-color: rgb(111, 0, 255);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 10px 10px 5px #382bacd4
+}
+
+.products:hover {
+    background-color: rgb(117, 86, 172);
+    font-size: 25px;
+}
+
+/* dynamic user maager */
+.usermaagerdeveloper {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    background: #f9f9f957;
+
+}
+
+.usermaagerdeveloper {
+    background-color: green;
+}
+
+.usermanagerdeletebutton {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    margin-top: 8px;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* activenavbar */
+.navactive {
+    color: #25d1eb;
+    border-bottom: 2px solid #25b3eb;
+}
+
+
+/* greeting bot */
+
+.greetbackdiv {
+    margin-top: 10px;
+    color: white;
+    border-radius: 20px;
+}
+.greetbackbtn {
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    padding: 20px;
+}
+
+/* color switcher */
+
+.dark-mode{
+  background-color: black !important;
+  color: white;
+}
+
+/* form */
+.error {
+  color: red;
+  font-size: 14px;
+}

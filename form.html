@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form JSDom</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="bg-gray-300 min-h-screen px-4 py-10">
+  <div class="flex flex-col lg:flex-row items-start justify-center gap-10">
+
+
+    <form class="w-full max-w-xl ">
+
+      <div class="flex flex-col  space-y-2 rounded-xl p-6 shadow-2xl bg-white border border-white/40">
+        <h2 class="text-2xl font-bold mb-4 flex justify-center">Form</h2>
+        <label id="firstName">First name :</label>
+        <input id="firstname" placeholder="Enter Your FirstName" class="border p-2 rounded outline-none" />
+        <span id="firstNameError" class="error"></span>
+
+        <label>Last name :</label>
+        <input id="lastname" placeholder="Enter Your LastName" class="border p-2 rounded outline-none" />
+        <span id="lastNameError" class="error"></span>
+
+        <label>Contact Number :</label>
+        <input id="number" placeholder="Enter Your contactNo" class="border p-2 rounded outline-none" />
+        <span id="numberError" class="error"></span>
+
+        <label>EmailId :</label>
+        <input id="email" placeholder="Enter Your EmailId" class="border p-2 rounded outline-none" />
+        <span id="emailError" class="error"></span>
+
+        <label>Qualification :</label>
+        <select id="qualification" class="border p-2 rounded outline-none">
+          <option disabled selected>---Select Option---</option>
+          <option value="UG">UG</option>
+          <option value="PG">PG</option>
+        </select>
+        <span id="qualificationError" class="error"></span>
+
+        <label>Immediate Joinee :</label>
+        <div class="flex gap-4 px-2">
+          <label><input type="radio" name="Immediatejoinee" value="yes"> Yes</label>
+          <label><input type="radio" name="Immediatejoinee" value="no"> No</label>
+        </div>
+        <span id="joineeError" class="error"></span>
+
+        <button id="submitBtn" type="button"
+          class="mt-6 bg-blue-700 text-white py-2 rounded hover:bg-blue-800 transition">
+          Submit
+        </button>
+
+      </div>
+    </form>
+
+
+    <div id="output" class="hidden  w-full max-w-xl p-6 bg-white shadow-2xl rounded-xl border mt-7 border-white/40">
+      <h2 class="text-xl font-bold mb-4">Form Data</h2>
+      <div id="result" class="divide-y divide-gray-200 text-gray-700">
+      </div>
+
+    </div>
+
+    <script type="module" src="/src/form.js"></script>
+</body>
+
+
+</html>

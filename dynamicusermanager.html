@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>task2</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-black">
+  <div class=" w-full  text-white flex flex-col justify-center mx-auto items-center mt-10">
+    <p class="text-2xl font-semibold">Dynamic User Manager</p>
+    <div class="flex flex-col sm:flex-row items-center gap-4">
+      <div class=" flex flex-col space-y-5  mt-10  p-10 bg-gray-700 rounded">
+        <label>Name :</label>
+        <input placeholder="Name" class="border p-2 rounded outline-none" id="name">
+        <label>Job role:</label>
+        <input placeholder="Job Role" class="border p-2 rounded outline-none" id="role">
+        <button class="rounded p-2 bg-violet-800 cursor-pointer">Submit</button>
+      </div>
+      <div class="cardcontainer w-70">
+
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="src/usermanager.js"></script>
+</body>
+
+</html>
