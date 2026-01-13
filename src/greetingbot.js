@@ -22,7 +22,7 @@ btnEl.addEventListener("click", () => {
   const textregex = /^[a-zA-Z]+$/;
 
   if (!textregex.test(inputvalue)) {
-    errorEl.innerText = "Please enter characters only (A–Z)";
+    errorEl.innerText = "Please Enter characters only ";
     errorEl.classList.remove("hidden");
     errorEl.style.color = "red";
     textEl.style.borderColor = "red";

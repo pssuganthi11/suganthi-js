@@ -9,17 +9,40 @@
 </head>
 
 <body>
-  <div class=" h-screen flex flex-col items-center justify-center bg-gray-100 p-4 ">
-    <div>
-      <input placeholder="search"/>
+  <div class=" h-screen flex flex-col items-center justify-center bg-gray-100 p-4  ">
+    <div class="bg-white p-4 sm:w-[500px] flex justify-between items-center rounded-full shadow-lg mt-10 ">
+      <input placeholder="Search your Project" class="outline-none flex-1 p-1 focus:outline-none" id="searchinput" />
+      <div class="text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
+          viewBox="0 0 24 24">
+          <g fill="none" fill-rule="evenodd">
+            <path
+              d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+            <path fill="currentColor"
+              d="M10.5 4a6.5 6.5 0 1 0 0 13a6.5 6.5 0 0 0 0-13M2 10.5a8.5 8.5 0 1 1 15.176 5.262l3.652 3.652a1 1 0 0 1-1.414 1.414l-3.652-3.652A8.5 8.5 0 0 1 2 10.5M9.5 7a1 1 0 0 1 1-1a4.5 4.5 0 0 1 4.5 4.5a1 1 0 1 1-2 0A2.5 2.5 0 0 0 10.5 8a1 1 0 0 1-1-1" />
+          </g>
+        </svg>
+      </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-      <div class="bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl"><a href="./form.html" target="_blank"> Form</a></div>
-      <div class="bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-linear hover:scale-105 hover:shadow-lg"><a href="./list.html" target="_blank"> List</a></div>
-      <div class="bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-linear hover:scale-105 hover:shadow-lg"><a href="./dynamicusermanager.html" target="_blank"> Dynamic User Manager</a></div>
-      <div class="bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-linear hover:scale-105 hover:shadow-lg"><a href="./activenavbar.html" target="_blank"> Active navbar</a></div>
-      <div class="bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-linear hover:scale-105 hover:shadow-lg"><a href="./greetingbot.html" target="_blank">Greeting Bot</a></div>
-      <div class="bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-linear hover:scale-105 hover:shadow-lg"><a href="./colorswitcher.html" target="_blank">Color Switcher</a>
+      <div data-title="form"
+        class="card bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-sky-200">
+        <a href="./form.html" target="_blank"> <span>Form 📝</span><p>25/12/2026</p></a></div>
+      <div data-title="List"
+        class="card bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-linear hover:scale-105 hover:shadow-lg hover:bg-sky-200">
+        <a href="./list.html" target="_blank"> <span>List 🗒️</span><p>02/01/2026</p></a></div>
+      <div data-title="Dynamic User Manager"
+        class="card bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-linear hover:scale-105 hover:shadow-lg hover:bg-sky-200">
+        <a href="./dynamicusermanager.html" target="_blank"><span>Dynamic User Manager 🧑‍💻</span>  <p>02/01/2026</p></a></div>
+      <div data-title="Active navbar"
+        class="card bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-linear hover:scale-105 hover:shadow-lg hover:bg-sky-200">
+        <a href="./activenavbar.html" target="_blank"> <span>Active navbar 🧭</span> <p>02/01/2026</p></a></div>
+      <div data-title="Greeting Bot"
+        class=" card bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-linear hover:scale-105 hover:shadow-lg hover:bg-sky-200">
+        <a href="./greetingbot.html" target="_blank"><span>Greeting Bot 🤖</span> <p>12/01/2026</p></a></div>
+      <div data-title="Color Switcher"
+        class="card bg-white rounded-2xl shadow-md p-6 transform transition duration-300 ease-linear hover:scale-105 hover:shadow-lg hover:bg-sky-200">
+        <a href="./colorswitcher.html" target="_blank"><span>Color Switcher ✨</span> <p>12/01/2026</p></a>
       </div>
     </div>
   </div>
