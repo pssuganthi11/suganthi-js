@@ -16,6 +16,8 @@ export default defineConfig({
         dynamicusermanager: resolve(__dirname, "dynamicusermanager.html"),
         textFormatter : resolve(__dirname,"textformatter.html"),
         passwordtoggle:resolve(__dirname,"passwordtoggle.html"),
+        bulletpoint:resolve(__dirname,"bulletpoints.html"),
+        cardcounter:resolve(__dirname,"cardcounter.html"),
       },
     },
   },
