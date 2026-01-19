@@ -14,6 +14,8 @@ export default defineConfig({
         colorswitcher: resolve(__dirname, "colorswitcher.html"),
         activenavbar: resolve(__dirname, "activenavbar.html"),
         dynamicusermanager: resolve(__dirname, "dynamicusermanager.html"),
+        textFormatter : resolve(__dirname,"textformatter.html"),
+        passwordtoggle:resolve(__dirname,"passwordtoggle.html"),
       },
     },
   },

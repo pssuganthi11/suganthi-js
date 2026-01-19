@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form JSDom</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+
+<body class="bg-black min-h-screen px-4 py-10">
+    <div class="container">
+        <div class="bg-gray-300 w-[500px] mx-auto flex flex-col justify-center items-center ">
+            <h2 class="text-xl font-semibold mt-2 ">
+                Text Formatter
+            </h2>
+             <label class="mt-10 font-semibold mr-25 text-xl mb-2">Enter your text</label>
+            <div class="text-xl font-semibold  mb-10 border" >
+               
+                <textarea  id="textarea" name="textarea" class="focus:none outline-none"  rows="5"> </textarea>
+            </div>
+            <div class="mb-10">
+                <button type="button" id="uppercase" class="p-2 bg-purple-700 rounded text-white cursor-pointer hover:bg-purple-900">Uppercase</button>
+                <button type="button" id="lowercase" class="p-2 bg-purple-700 rounded text-white cursor-pointer hover:bg-purple-900"> lowercase</button>
+                <button  type="button" id="clear" class="p-2 bg-purple-700 rounded text-white cursor-pointer hover:bg-purple-900">Clear Text</button>
+            </div>
+
+        </div>
+    </div>
+    <script type="module" src="/src/textformatter.js"></script>
+</body>
+
+</html>
