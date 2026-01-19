@@ -14,6 +14,6 @@ iconDiv.addEventListener("click", () => {
   passwordInput.type = isHidden ? "text" : "password";
 
   icon.src = isHidden
-    ? "/public/SolarLockPasswordBroken.png"
-    : "/public/SolarLockPasswordOutline.png";
+    ? "/public/SolarLockPasswordOutline.png" 
+    : "/public/SolarLockPasswordBroken.png";
 });
