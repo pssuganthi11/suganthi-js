@@ -8,13 +8,11 @@ let count = 0;
 function updateCount() {
   spantextEL.textContent = count;
   if (count <= 0) {
-    divcontainerEL.style.borderColor = "red";
-    divcontainerEL.style.border = "2px solid red";
-    divcontainerEL.style.boxShadow = "10px 0 10px red";
+    spantextEL.style.backgroundColor = "red";
+    spantextEL.style.border = "2px solid red";
   } else {
-    divcontainerEL.style.borderColor = "green";
-   divcontainerEL.style.border = "2px solid green";
-    divcontainerEL.style.boxShadow = "10px 0 10px green";
+    spantextEL.style.backgroundColor = "green";
+   spantextEL.style.border = "2px solid green";
   }
 }
 
