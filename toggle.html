@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Theme Toggle </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="space-y-20">
+    <div class="flex justify-end p-8">
+        <label id="trackercolor"
+            class=" relative w-14 h-8 rounded-full dark:bg-gray-700  bg-gray-300  shadow-inner cursor-pointer transition-all duration-150 inline-flex ">
+            <input type="checkbox" class="sr-only peer" />
+            <div class="absolute top-1 left-1 w-6 h-6 bg-[#e0e5ec] rounded-full 
+              peer-checked:translate-x-6 transition-all duration-300 
+              shadow-[4px_4px_8px_#bebebe,-4px_-4px_8px_#ffffff]">
+            </div>
+        </label>
+    </div>
+
+    <div class="max-w-sm p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition mx-auto " id="cardcontainer">
+        <h3 class="text-xl font-semibold mb-2 ">Html Roadmap</h3>
+        <p class=" mb-4">
+            This is Roadmap for Html design
+        </p>
+        <button class="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600" id="btn">
+            Click ->
+        </button>
+    </div>
+    <script type="module" src="/src/toggle.js" async defer></script>
+</body>
+
+</html>

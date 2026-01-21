@@ -18,6 +18,8 @@ export default defineConfig({
         passwordtoggle:resolve(__dirname,"passwordtoggle.html"),
         bulletpoint:resolve(__dirname,"bulletpoints.html"),
         cardcounter:resolve(__dirname,"cardcounter.html"),
+        toggle:resolve(__dirname,"toggle.html"),
+        textcounter:resolve(__dirname,"textcounter.html"),
       },
     },
   },

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textcounter</title>
+    <link rel="stylesheet" href="/src/style.css">
+
+</head>
+
+<body class="bg-black text-white">
+    <div class="flex justify-center px-4 mt-20 sm:mt-32    ">
+        <div class="w-full max-w-md relative ">
+            <label class="block mb-2 text-xl font-medium">
+                Write comments 📝
+            </label>
+            <textarea id="textarea" name="comments" rows="4" required
+                class="scroll w-full resize-none rounded-md border border-gray-300 p-3 outline-none text-gray-500"
+                placeholder="Write your comments..."> </textarea>
+
+            <span id="countresult" class="absolute bottom-2 right-2 text-xs ">
+                0/max 200 character
+            </span>
+        </div>
+
+
+
+    </div>
+    <div class="flex flex-col  justify-center items-center">
+        <button class="bg-purple-600 p-2 rounded lg:w-[400px] mt-10 cursor-pointer">Reset</button>
+        <span id="error" class=" bg-red-600 lg:w-[400px] p-1 rounded mt-10 hidden">🙅‍♀️You Reached the Limit</span>
+    </div>
+
+    <script type="module" src="/src/textcounter.js" async defer></script>
+</body>
+
+</html>

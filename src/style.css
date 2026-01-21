@@ -70,8 +70,17 @@
 
 .dark-mode{
   background-color: black !important;
-  color: white;
+  color:white;
+  
 }
+.graymode{
+      background-color: gray !important;
+
+}
+
+.scroll::-webkit-scrollbar {
+   display: none;
+ }
 
 /* form */
 .error {
