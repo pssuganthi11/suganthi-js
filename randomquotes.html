@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes</title>
+    <link rel="stylesheet" href="./src/style.css">
+
+</head>
+
+<body>
+
+
+    <div class="flex flex-col mx-auto max-w-md p-6 rounded-2xl bg-black shadow-xl text-center space-y-4 mt-30">
+        <p id="quote" class="text-lg font-medium text-gray-300 leading-relaxed">
+            Click the button to get a quote
+        </p>
+
+        <h4 id="author" class="text-sm font-semibold text-gray-300"></h4>
+
+        <button id="btn" class="mt-4 px-6 py-2 rounded-full bg-purple-500 text-white font-semibold cursor-pointer
+           hover:bg-indigo-600 active:scale-95 transition-all duration-200">
+            New Quote
+        </button>
+    </div>
+
+    <script type="module" src="/src/randomquotes.js" async defer></script>
+
+</body>
+
+</html>

@@ -21,6 +21,10 @@ export default defineConfig({
         toggle: resolve(__dirname, "toggle.html"),
         textcounter: resolve(__dirname, "textcounter.html"),
         faq: resolve(__dirname, "faq.html"),
+        search: resolve(__dirname, "search.html"),
+        quotes: resolve(__dirname, "randomquotes.html"),
+
+
       },
     },
   },
