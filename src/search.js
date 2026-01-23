@@ -6,25 +6,27 @@ const divcon = document.getElementById("divcon");
 searchinputEL.addEventListener("keyup", () => {
   const searchvalue = searchinputEL.value.toLowerCase();
 
-  listItems.forEach((item) => {
-    const text = item.textContent.toLowerCase();
-
-    if (text.includes(searchvalue)) {
+  if (searchvalue === "") {
+    listItems.forEach(item => {
       item.style.display = "block";
-    } else {
-      item.style.display = "none";
-    }
-
-    if (text != searchvalue) {
-      noEL.classList.remove("hidden");
-      divcon.classList.add("hidden");
-    } else {
-      noEL.classList.add("hidden");
-    }
-    if (searchvalue == "") {
-      divcon.classList.remove("hidden");
-            noEL.classList.add("hidden");
-
-    }
+    });
+    noEL.classList.add("hidden");
+    divcon.classList.remove("hidden");
+    return;
+  }
+   listItems.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = text.includes(searchvalue) ? "block" : "none";
   });
+  const hasMatch = [...listItems].some(
+    item => item.style.display !== "none"
+  );
+
+  if (!hasMatch) {
+    noEL.classList.remove("hidden");
+    divcon.classList.add("hidden");
+  } else {
+    noEL.classList.add("hidden");
+    divcon.classList.remove("hidden");
+  }
 });
