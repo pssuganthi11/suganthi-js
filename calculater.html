@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link href="./src/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body class="bg-black min-h-screen flex justify-center">
+
+    <div class="w-full max-w-sm h-screen flex flex-col px-5">
+        <div class="bg-white/10 mt-20 rounded-lg">
+
+            
+            <div class="flex items-end justify-end pb-6 p-3 ">
+                <span id="display" class="text-white text-6xl font-light">0</span>
+            </div>
+
+           
+            <div class="grid grid-cols-4 gap-y-7 text-xl p-3 mt-2">
+
+              
+                <button data-action="clear" class="text-orange-400 cursor-pointer hover:text-orange-900" >AC</button>
+                <button data-action="delete" class="text-orange-400 cursor-pointer hover:text-orange-900">
+                    <i class="fas fa-backspace"></i>
+                </button>
+                <button data-action="percent" class="text-orange-400 cursor-pointer hover:text-orange-900">%</button>
+                <button data-operator="/" class="text-orange-400 cursor-pointer hover:text-orange-900">÷</button>
+
+               
+                <button data-number="7" class="text-gray-200 cursor-pointer hover:text-orange-900">7</button>
+                <button data-number="8" class="text-gray-200 cursor-pointer hover:text-orange-900">8</button>
+                <button data-number="9" class="text-gray-200 cursor-pointer hover:text-orange-900">9</button>
+                <button data-operator="*" class="text-orange-400 cursor-pointer hover:text-orange-900">×</button>
+
+               
+                <button data-number="4" class="text-gray-200 cursor-pointer hover:text-orange-900">4</button>
+                <button data-number="5" class="text-gray-200 cursor-pointer hover:text-orange-900">5</button>
+                <button data-number="6" class="text-gray-200 cursor-pointer hover:text-orange-900">6</button>
+                <button data-operator="-" class="text-orange-400 cursor-pointer hover:text-orange-900">−</button>
+
+                <button data-number="1" class="text-gray-200 cursor-pointer hover:text-orange-900">1</button>
+                <button data-number="2" class="text-gray-200 cursor-pointer hover:text-orange-900">2</button>
+                <button data-number="3" class="text-gray-200 cursor-pointer hover:text-orange-900">3</button>
+                <button data-operator="+" class="text-orange-400 cursor-pointer hover:text-orange-900">+</button>
+
+              
+                <button data-action="age" class="text-orange-400 cursor-pointer hover:text-orange-900" >
+                    <i class="fa-solid fa-user-clock"></i>
+                </button>
+
+                <button data-number="0" class="text-gray-200 cursor-pointer hover:text-orange-900">0</button>
+                <button data-number="." class="text-gray-200 cursor-pointer hover:text-orange-900">.</button>
+
+               
+                <button data-action="equals"
+                    class="bg-orange-500 text-white rounded-full w-14 h-14 flex items-center justify-center text-2xl ml-auto cursor-pointer hover:text-orange-900">
+                    =
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/calculater.js"></script>
+</body>
+
+</html>

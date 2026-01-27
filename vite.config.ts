@@ -23,8 +23,7 @@ export default defineConfig({
         faq: resolve(__dirname, "faq.html"),
         search: resolve(__dirname, "search.html"),
         quotes: resolve(__dirname, "randomquotes.html"),
-
-
+        calculater: resolve(__dirname, "calculater.html"),
       },
     },
   },
