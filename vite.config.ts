@@ -24,6 +24,8 @@ export default defineConfig({
         search: resolve(__dirname, "search.html"),
         quotes: resolve(__dirname, "randomquotes.html"),
         calculater: resolve(__dirname, "calculater.html"),
+        githubfinder: resolve(__dirname, "api.html"),
+
       },
     },
   },
