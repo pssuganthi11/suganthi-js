@@ -1,67 +1,159 @@
+const profileEL = document.getElementById("profile");
 const button = document.getElementById("searchBtn");
-const profileDiv = document.getElementById("profile");
-const errorDiv = document.getElementById("error");
-const usernameInput = document.getElementById("username");
+const usernameInput = document.getElementById("searchinput");
 
-button.addEventListener("click", async () => {
-  const username = usernameInput.value.trim();
-
-  // show error 
-  if (!username) {
-    errorDiv.innerHTML = `<p style="color:red">Please enter a username</p>`;
-    return;
-  }
-
-  // clear error 
-  errorDiv.innerHTML = "";
-
-  try {
-    const res = await fetch(`https://api.github.com/users/${username}`);
-    if (!res.ok) throw new Error("User not found");
-
-    const user = await res.json();
-
-    let profiles = JSON.parse(sessionStorage.getItem("profiles")) || [];
-
-    if (profiles.some(p => p.login === user.login)) {
-      alert("User already added");
-      return;
-    }
-
-    profiles.push(user);
-    sessionStorage.setItem("profiles", JSON.stringify(profiles));
-
-    // append without dekete old cards
-    profileDiv.innerHTML += createCard(user);
-
-  } catch (err) {
-    errorDiv.innerHTML = `<p style="color:red">${err.message}</p>`;
-  }
+button.addEventListener("click", () => {
+  const user = usernameInput.value.trim();
+  console.log(user);
+  profilefinder(user);
 });
+const profilefinder = async (user) => {
+  try {
+    const response = await fetch(`https://api.github.com/users/${user} `);
+    if (!response.ok) throw new Error("User not found");
 
-function createCard(user) {
-  return `
-    <div class="bg-white/10 p-4 rounded-xl text-white text-center w-44 flex flex-col items-center gap-2">
-      <img src="${user.avatar_url}" width="80" class="rounded-full" />
+    const data = await response.json();
+    displaydata(data);
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
+};
 
-      <h3 class="font-semibold text-sm">
-        ${user.name ?? user.login}
-      </h3>
+function displaydata(user) {
+  profileEL.innerHTML = `
+<div  style="
+  display: flex;
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  color: #e5e7eb;
+">
 
-      <p class="text-xs text-gray-300">@${user.login}</p>
+  <!-- LEFT: PROFILE CONTAINER -->
+  <div style="
+    width: 260px;
+    background: #0f172a;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  ">
+   <div style="
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+">
+  <img
+    src="${user.avatar_url}"
+    alt="Avatar"
+    style="
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    "
+  />
+</div>
 
-      <p class="text-xs"> Repos: ${user.public_repos}</p>
-      <p class="text-xs">Followers: ${user.followers}</p>
-      <p class="text-xs"> Following: ${user.following}</p>
+    <h2 style="margin: 12px 0 4px;">
+      ${user.name ?? "No name available"}
+    </h2>
 
-      <a 
-        href="${user.html_url}" 
-        target="_blank"
-        class="text-blue-400 text-xs hover:underline"
-      >
-        View on GitHub
-      </a>
+    <p style="margin: 0; color: #94a3b8;">
+      @${user.login}
+    </p>
+
+    <p style="margin-top: 10px; font-size: 14px;">
+      ${user.bio ?? "No bio available"}
+    </p>
+  </div>
+
+  <!-- RIGHT: DETAILS CONTAINER -->
+  <div style="
+    flex: 1;
+    background: #020617;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  ">
+
+    <h3 style="margin-top: 0; font-size: 18px;">
+      Profile Details :
+    </h3>
+
+    <!-- DETAILS GRID -->
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    ">
+      <div> <strong>Company:</strong> ${user.company ?? "N/A"}</div>
+      <div> <strong>Joined:</strong> ${new Date(user.created_at).toDateString()}</div>
+      <div> <strong>Repos:</strong> ${user.public_repos}</div>
+      <div> <strong>Followers:</strong> ${user.followers}</div>
     </div>
+
+    <!-- CHIPS -->
+    <div style="
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap; 
+      margin-top:20px;
+    ">
+      <span style="
+        background: #1e293b;
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 14px;
+      ">
+         ${user.public_repos} Repositories
+      </span>
+
+      <span style="
+        background: #1e293b;
+        padding: 8px 14px;
+        border-radius: 999px;
+      ">
+         ${user.followers} Followers
+      </span>
+
+      <span style="
+        background: #1e293b;
+        padding: 8px 14px;
+        border-radius: 999px;
+      ">
+         ${user.following} Following
+      </span>
+    </div>
+<a
+  href="${user.html_url}"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px 0;
+    background: #9333ea;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+  "
+>
+  View Profile
+</a>
+
+  </div>
+  
+</div>
+
+    
+   
   `;
 }
-
