@@ -25,6 +25,7 @@ export default defineConfig({
         quotes: resolve(__dirname, "randomquotes.html"),
         calculater: resolve(__dirname, "calculater.html"),
         githubfinder: resolve(__dirname, "api.html"),
+        estimator: resolve(__dirname, "estimator.html"),
 
       },
     },

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Cost Estimator</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="min-h-screen bg-cover " style="background-image: url('./public/bg.png');">
+
+    <div class="min-h-screen bg-black/60">
+
+        <nav class="flex flex-col sm:flex-row justify-between items-center px-6 sm:px-8 py-4 text-white gap-4">
+
+            <div class="flex items-center gap-2">
+                <img src="./public/logo.png" alt="Cost Estimator Logo" class="w-20 h-10-object-contain" />
+                <span class="text-2xl font-bold text-white font-mono">
+                    Cost Estimator
+                </span>
+            </div>
+
+            <ul class="flex gap-6 font-semibold font-mono text-sm sm:text-base">
+                <li><a href="#home" class="hover:text-orange-400 text-2xl">Home</a></li>
+                <li><a href="#estimate" class="hover:text-orange-400 text-2xl">Estimator</a></li>
+            </ul>
+
+        </nav>
+
+        <section id="home" class="px-6 sm:px-8 py-16 sm:py-20 text-white min-h-screen flex justify-center items-center flex-col">
+
+            <div class="max-w-2xl mx-auto text-center">
+
+                <h2 class="text-3xl sm:text-5xl font-bold mb-6 sm:mb-10">
+                    Estimate Your Project Cost
+                    <span class="text-orange-400"> Instantly</span>
+                </h2>
+
+                <p class="text-gray-400 text-base sm:text-xl leading-relaxed">
+                    A simple and smart cost estimation tool to calculate your project budget
+                    based on selected features like static or dynamic pages, authentication,
+                    payment integration, and more.
+                </p>
+                
+            </div>
+            <div class="mt-10 flex flex-wrap gap-2 justify-center">
+                    <span class=" bg-orange-400/50  p-2 rounded-full text-lg font-semibold">Budgeting & Funding</span>
+                    <span class=" bg-orange-400/50 p-2 rounded-full text-lg font-semibold">Risk Management</span>
+                    <span class=" bg-orange-400/50 p-2 rounded-full text-lg font-semibold">Planning & Control</span>
+                    <span class=" bg-orange-400/50 p-2 rounded-full text-lg font-semibold">Decision-Making</span>
+
+                </div>
+        </section>
+
+
+
+        <main id="estimate" class="flex justify-center items-center px-4 sm:px-6 py-10">
+            <div class="bg-gray-900/50 backdrop-blur rounded-xl w-full max-w-lg p-4 sm:p-6 text-white shadow-lg">
+
+
+                <h2 class="text-2xl font-semibold text-center mb-6">
+                    Project Cost Estimator
+                </h2>
+
+                <!-- <div class="flex justify-between bg-gray-800 p-3 rounded-lg mb-4">
+                    <span class="text-gray-300">Base Price</span>
+                    <span class="font-bold">₹<span id="base">20000</span></span>
+                </div> -->
+
+                <h3 class=" mb-2">Page Type</h3>
+                <div class="flex gap-3 mb-5" id="pageType"></div>
+
+                <h3 class="text-lg font-medium mb-2">Features</h3>
+                <div class="flex flex-wrap gap-3 mb-6" id="features"></div>
+
+                <div class="flex justify-between border-t border-gray-700 pt-4">
+                    <span class="text-lg">Total Cost</span>
+                    <span class="text-2xl font-bold text-green-400">
+                        ₹<span id="total">0</span>
+                    </span>
+                </div>
+
+                <!-- <button class="mt-5 w-full bg-orange-500 hover:bg-orange-600 transition rounded-lg py-2 font-semibold">
+                    Get Quote
+                </button> -->
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="./src/estimator.js"></script>
+</body>
+
+</html>
